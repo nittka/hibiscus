@@ -35,6 +35,7 @@ import de.willuhn.jameica.gui.util.TabGroup;
 import de.willuhn.jameica.hbci.HBCI;
 import de.willuhn.jameica.hbci.gui.action.UmsatzTypTreeExport;
 import de.willuhn.jameica.hbci.gui.controller.UmsatzTypTreeControl;
+import de.willuhn.jameica.hbci.gui.input.KontoInput2;
 import de.willuhn.jameica.hbci.gui.parts.UmsatzTypVerlauf;
 import de.willuhn.jameica.system.Application;
 import de.willuhn.logging.Logger;
@@ -66,6 +67,7 @@ public class UmsatzTypTree extends AbstractView
       
       Container left = new SimpleContainer(cols.getComposite());
       left.addInput(control.getKontoAuswahl());
+      left.addInput(new KontoInput2());
       
       Input t = control.getText();
       left.addInput(t);
